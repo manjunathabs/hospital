@@ -1,0 +1,88 @@
+<table  align="center" width="720px">
+<td colspan="5" align="right">
+<b>F/FO/01-14 Rev:00</b>
+</td>
+<tr>
+<td colspan="5" align="center">
+<b>Patient Registration Record</b>
+</td>
+</tr>
+
+<tr>
+</tr>
+
+<table class='myborder'  width='720px'>
+<tr>
+	<% raise @patients
+<td colspan = '3'>Date & Time:&nbsp;<%=( @patients.created_at.blank? ? '' : @patients.created_at.strftime('%d-%m-%Y %I:%M %p') ) %></td>
+<td colspan ='2'><%#=@visit.registration_fee_category.category_name if !@visit.registration_fee_category.blank?%></td>
+</tr>
+<tr>
+	<td width='18%'></td>
+	<td width='30%'></td>
+	<td width='15%'></td>
+	<td width='13%'></td>
+	<td width='24%'></td>	
+</tr>	
+<tr>
+<tr><td colspan = '1'>Patient Name</td>
+<td colspan = '4'>:&nbsp;<b><%#=(@visit.patient.display_name_with_title) %></b></td>
+</tr>
+<tr>
+<td colspan = '1'>Father's Name</td>
+<td colspan = '2'>:&nbsp;<%#= (@visit.patient.father_name) %></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td colspan = '1'>Mother's Name</td>
+<td colspan = '1'>:&nbsp;<%#= ( @visit.patient.mother_first_name.blank? ? '' : @visit.patient.mother_first_name) %></td>
+<td colspan = '1'>CR. No.</td>
+<td>:&nbsp;<b><%#=(@visit.patient.display_id.to_s) %></b></td>
+<td></td>
+</tr>
+<tr>
+<td colspan = '1'>DOB</td>
+
+<td colspan = '1'>:&nbsp;<%#= showdate(@visit.patient.date_of_birth)%></td>
+<td>TB.No</td>
+<td>:&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<td colspan = '1'>Age</td>
+<td colspan = '1'>:&nbsp;<%#= (@visit.patient.details_for_header.split(',')[1].split('Y')[0].split(' ')[0]) %> Years</td>
+<td>CT.No</td>
+<td>:&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<td colspan = '1'>Sex</td>
+<td colspan = '1'>:&nbsp;<%#= ( @visit.patient.gender.name) %></td>
+<td>RT.No</td>
+<td>:&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<td colspan = '1'>Marital Status</td>
+<td colspan = '1'>:&nbsp;<%#= ( @visit.patient.marital_status.blank? ? '' :  @visit.patient.marital_status.name) %></td></td>
+<td>SR No</td>
+<td>:&nbsp;</td>
+<td></td>
+</tr>
+<tr>
+<td colspan = '1'>Religion</td>
+<td colspan = '1'>:&nbsp;<%#=( @visit.patient.religion_id.blank? ? '' :  @visit.patient.religion.name) %></td>
+<td>File No</td>
+<td>:<%#= (@visit.mrd_number )%></td>
+</tr>
+<tr>
+<td colspan = '1'>Nationality</td>
+<%# nat = Nationality.find_by_id(@visit.patient.nationality_id)%>
+<td colspan = '1'>:&nbsp;<%#= nat.name %></td>
+<td>UHID No</td>
+<td>:&nbsp;</td>
+<td></td>
+</tr>
+</tr>
+</table>

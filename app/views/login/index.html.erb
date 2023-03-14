@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>
+
+ <style>
+        #container{
+            padding: unset;
+        }
+        .submit_button_bg{
+            font-size: 14px;
+            width: auto;
+            height: 30px;
+            padding: 4px 24px;
+            text-align: center;
+            color: #fff;
+            border: none;
+            margin: 0 6px 0 0;
+            background: none repeat scroll 0 0 #337AB7;
+            border: 1px solid #2E6DA4;
+            border-radius: 5px;
+        }
+        .submit_button_bg:hover {
+            background: none repeat scroll 0 0 #1F7DC9;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        input:hover[type='text'], input:hover[type='password']{
+            border-color: rgba(0,0,0,0.1);
+            background-color: #fff;
+            -webkit-box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+            box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+        }
+        select:focus{
+            outline: none
+        }
+        select:hover{
+            border-color: rgba(0,0,0,0.1);
+            background-color: #fff;
+            -webkit-box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+            box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
+        }
+        .size153{
+            display: block;
+            width: 100%;
+            padding: 0.375rem 2.25rem 0.375rem 0.75rem;
+            -moz-padding-start: calc(0.75rem - 3px);
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            background-color: #fff;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 16px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        .formInput{
+            padding: 6px 9px;
+            border: solid 1px #E5E5E5;
+            outline: 0;
+            width: auto;
+            /* width: 200px; */
+            box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+            -moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+            -webkit-box-shadow: rgb(0 0 0 / 10%) 0px 0px 8px;
+            margin: 5px 0 5px 0 !important;
+        }
+        #header {
+            border-bottom: none;
+            float: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .logo{
+            float: none;
+        }
+        .caption{
+            float: none;
+            margin-top:0;
+        }
+        .login_form_wrapper{
+            border:none;
+            position: unset;
+            top: auto;
+            left: auto;
+            width: auto;
+            margin-top: auto;
+            margin-left: auto;
+            padding: 5px 0 0 0;
+            
+        }
+        .backgroundImage{
+            background: transparent url("http://dghs-patientportal.cloud1.parashmis.in/img/Web%201920%20%E2%80%93%201.png");
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:center;
+        }
+        #footer{
+            background: transparent url("http://dghs-patientportal.cloud1.parashmis.in/img/aaa.png");
+            height: 200px;
+            background-repeat:no-repeat;
+            background-size:cover;
+            margin-bottom: 0px;
+            border: 0;
+            position: relative;
+
+        }
+        .main_kejriwal_images{
+            display: block;
+            object-fit: contain;
+            margin: auto;
+            width: 90%;
+            background-size: 100% 100%
+        }
+        .login_main_kejriwal_images{
+            width: 90%;
+            display: block;
+            margin: auto;
+
+        }
+        @media only screen and (max-width: 768px) {
+            #footer {
+                background: transparent url("http://dghs-patientportal.cloud1.parashmis.in/img/aaa.png");
+                /* height: 93px; */
+                background-repeat: no-repeat;
+                background-size: contain;
+                margin-bottom: 0px;
+                position: relative;
+                border: 0;
+            }
+            .main_kejriwal_images{
+                max-width: 100%;
+                height: auto;
+                width: 100%;
+            }
+            .login_main_kejriwal_images{
+                width: 100%;
+                display: block;
+                margin: auto;
+            }
+            .formInput{
+                width: auto;
+            }
+            table{
+                    width:100%;
+                }
+
+                td{
+                    display:block;
+                    width:100%;
+                }
+
+                tr{
+                    display:block;
+                    /* margin-bottom:0px; */
+                }
+            .labelColon{
+                margin: 0;
+            }
+        }
+   </style>
+
+</head>
+
+
+  
+    <body>  
+		<div id="header">
+			<%= image_tag "hospital_logo.png", {:width => 101, :height => 85, :alt => "logo", :class => "logo"} %>
+                                     <p class="caption">Hospital Software</p>			
+		</div>
+        <div>
+            <img class="main_kejriwal_images" id="main_kejriwal_logo" 
+             src="./images/login_background_new.jpeg"/>
+        </div>
+		<!--header--->
+        <div class="login_main_kejriwal_images" style="background-image: linear-gradient(180deg, #7A0029, #3C2046, #3C2046);">
+		<%#=form_tag({}, {:name => "signin_form", :id=>"formHeight", :style=>"display: table;margin:auto;"}) do %>
+	
+<%= form_tag :action => 'login', :id=>"formHeight" do %>
+
+
+    	<div id="wrapper"  style="display: table-cell;vertical-align: middle; height: 100%;">
+		    <div id="container">
+		       <!--  <img src="/images/paraslogo.jpg" class="paras_logo" width="180" height="123" alt="paraslogo"/> -->
+		        <div class="login_form_wrapper">
+		            <div class="login_form_border">
+		            	<table class="login_form">
+		            		<tr>
+								<td colspan="2"><p id="flash_colour"><%= flash[:notice] %></p></td>
+		</tr>
+		<tr>
+		<td><%#= link_to "Forgot Password ", :action => "editing_user",:controller =>"login"%></td>
+                   <!-- <a><b><%#= link_to 'Forget Password' , "/login/forgot_password",:onclick => "window.open(this.href, 'mywin','left=400,top=300,width=500,height=300,resizable=0'); return false;" %>  </b>
+                                </a> -->
+
+		</tr>
+						    <tr>
+					<td><label for="user_name">User Name </label></td>
+					<td><span class="labelColon"></span><%=text_field 'user', 'email',:class=>"formInput"%></td>
+							</tr>
+				
+							<tr>
+					<td><label for="user_password">  Password </label></td>
+					<td><span class="labelColon"></span><%=password_field 'user', 'encrypted_password',:class=>"formInput"%></td>
+						</tr>
+						<!--	<tr><td colspan="4"><span>Please select Location after entering User Name and Password.
+</span></td></tr> -->
+			    <!--
+							<tr id='locations_div'>
+							<td><label for="user_location_id"> Location </label></td>
+							<td><span class="labelColon"></span><%#= collection_select :user, :location_id, [],'id', 'name', {:prompt=>'Select'}, {:class => "size153"} %>  
+							<span id="image" style="display: none;" valign="top" align="right"><img src="/images/ajax-loader2.gif" alt="ajax_loader.gif"/></span></td>
+							</tr>
+				
+							<tr id='stations_div'>
+							<td><label for="station_id">Station </label></td>
+							<td><span class="labelColon"></span><%#= collection_select :station, :id, {},'id', 'name', {:prompt => 'Select'}, {:class => "size153"} %>
+							<span id="image1" style="display: none;" valign="top" align="right"><img src="/images/ajax-loader2.gif" alt="ajax_loader.gif"/></span></td>
+							</tr>
+			-->
+							<tr style="text-align:right;">
+							<!--<td colspan="2"><input class="submit_button_bg" type="submit"  value="Sign In"/>&nbsp;-->
+							<td colspan="2"><%= submit_tag "Sign In", :class=>"submit_button_bg", :type=>"submit"%>&nbsp;
+							<!--<input type="button"  class = "submit_button_bg" id="login_reset" value="Reset"/></td>-->
+							<%= submit_tag "Reset", :class=>"submit_button_bg", :id=>"login_reset"%></td> 
+							</tr> 
+					</table>
+                                     <table>
+		            		<tr>
+							<!-- <div align="left"><a><b><%#= link_to 'Help' , "/paras_help_final.pdf#page=08",:onclick => "window.open(this.href, 'mywin',
+                                    'left=20,top=20,width=700,height=700,toolbar=1,resizable=0'); return false;" %>  </b></a></div> --></tr>
+		            	</table>
+		            </div>
+<div style="font-size:small;margin-left:100px;"><%= begin AppVersion.find_all_by_module_name('ERPS').last.version rescue "" end %></div>
+       
+<div><%#= link_to "SSO Login", {:controller=>'' , :action=>""},
+     {:style=>"color:white"}%>
+</div>
+
+                 </div>
+		    </div>
+		</div>
+		<!--wrapper -->
+		<% end %>
+        <div>
+            <img src="" style="max-width: 100%;
+            height: auto;"/>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
